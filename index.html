@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Mishti — Valentine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Fixed ambient background -->
+    <div class="sky" aria-hidden="true"></div>
+    <div class="stars-layer" id="starsLayer" aria-hidden="true"></div>
+
+    <main class="page">
+      <!-- ACT 1 -->
+      <section class="act act-1" id="act1">
+        <div class="act-content">
+          <p class="tiny">💖 Oeshmita's Night Sky 🌙✨</p>
+          <h1 class="title">
+            Among a thousand stars,<br />I’d still look for you, MyMoon 🌙🤍
+          </h1>
+
+          <p class="subtitle">Tap the moon, love. It’s glowing for you 🌙✨</p>
+
+          <!-- Keep it clean: just one tip chip -->
+          <div class="hint-row">
+            <span class="chip">Tip: Follow the moonlight 🌙</span>
+          </div>
+
+          <div
+            class="moon-field"
+            id="moonField"
+            aria-label="Tap the moon to begin"
+          >
+            <button
+              class="moon"
+              id="moonBtn"
+              type="button"
+              aria-label="Glowing moon"
+            ></button>
+            <div
+              class="moonlight hidden"
+              id="moonlight"
+              aria-hidden="true"
+            ></div>
+          </div>
+
+          <!-- Continue button appears only after she finds the right star -->
+          <div class="unlock-row">
+            <button class="primary hidden" id="continueBtn" type="button">
+              Continue, love ✨
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPORTANT: We keep an EMPTY mount point.
+           Nothing is shown here until later we inject Act 2 via JS. -->
+      <div id="nextActMount"></div>
+    </main>
+
+    <!-- Toast / message -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
