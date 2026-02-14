@@ -259,7 +259,7 @@ questArea.addEventListener("touchmove", (e) => {
 questArea.addEventListener("touchstart", (e) => {
   const t = e.touches[0];
   if (t) setSpotlight(t.clientX, t.clientY);
-}, { passive: true });
+// }, { passive: true });
 
 // Warmer hints: show a hint when she taps/clicks the area (not a heart)
 let lastHintTime = 0;
